@@ -16,17 +16,14 @@ PySCF solves the eigenpairs of
 $$
   \left(
   \begin{matrix}
-  A & B \\
-  -B & -A
+  A & B \\ -B & -A
   \end{matrix}\right)
   \left(\begin{matrix}
-  X\\
-  Y
+  X \\ Y
   \end{matrix}\right)
   =
   \left(\begin{matrix}
-  X\\
-  Y
+  X \\ Y
   \end{matrix}\right)
   \Omega
 $$
