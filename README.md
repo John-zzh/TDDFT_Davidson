@@ -10,6 +10,7 @@ See the comparsion, just run
 python main.py
 ```
 ## Problem: PySCF TDDFT does not converge
+
 PySCF solves the eigenpairs of 
 $$
   \left(
@@ -32,6 +33,7 @@ and diagonalize the response matrix $ \left(\begin{matrix} A & B \\-B & -A \end{
 
 
 ## Solution
+
 In stead, a more reliable way is to solve 
 $$
   \left(
