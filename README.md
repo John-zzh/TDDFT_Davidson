@@ -29,7 +29,7 @@ Y
 \end{matrix}\right)
 \Omega$$
 
-and diagonalize the response matrix $\left(\begin{matrix}A&B\\\\-B&-A\end{matrix}\right)$ using traditional Davidson algorithm as if this response matrix is symmatric. But it is actually not symmatric, and it leads to unconvergence problem.
+and diagonalize the response matrix $\left(\begin{matrix}A&B\\\\-B&-A\end{matrix}\right)$ using traditional Davidson algorithm as if this response matrix is symmetric. But it is actually not symmetric, and it leads to unconvergence problem.
 
 
 ## Solution
