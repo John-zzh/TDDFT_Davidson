@@ -14,7 +14,6 @@ python main.py
 PySCF solves the eigenpairs of 
 
 $$
-\begin{equation*}
 \left(
 \begin{matrix}
 A & B \\
@@ -23,63 +22,58 @@ A & B \\
 \left(\begin{matrix}
 X \\
 Y
-\end{matrix}\right)
-=
+\end{matrix}\right) =
 \left(\begin{matrix}
 X \\
 Y
 \end{matrix}\right)
-\Omega
-\end{equation*}$$
+\Omega$$
 
-and diagonalize the response matrix $ \left(\begin{matrix} A & B \\-B & -A \end{matrix}\right) $ using traditional Davidson algorithm as if this response matrix is symmatric. But it is actually not symmatric, and it leads to unconvergence problem.
+and diagonalize the response matrix $\left(\begin{matrix}A&B\\\\-B&-A\end{matrix}\right)$ using traditional Davidson algorithm as if this response matrix is symmatric. But it is actually not symmatric, and it leads to unconvergence problem.
 
 
 ## Solution
 
 In stead, a more reliable way is to solve 
 
-$$\begin{equation*}
-\left(
+$$\left(
 \begin{matrix}
-A & B \\
+A & B \\\\
 B & A
 \end{matrix}\right)
 \left(\begin{matrix}
-X\\
+X \\\\
 Y
-\end{matrix}\right)
-=
+\end{matrix}\right) =
 \left(\begin{matrix}
-1 & 0 \\
+1 & 0 \\\\
 0 & -1
 \end{matrix}
 \right)
 \left(\begin{matrix}
-X\\
+X \\\\
 Y
 \end{matrix}\right)
 \Omega
-\end{equation*}$$
+$$
 
-In each iteration, both $ \left(\begin{matrix} A & B \\-B & -A \end{matrix}\right) $ and $ \left(\begin{matrix} 1 & 0 \\0 & -1 \end{matrix}\right) $ will be projected into the subspace, where we solve
+In each iteration, both $\left(\begin{matrix} A & B \\\\ -B & -A \end{matrix}\right) $ and $ \left(\begin{matrix} 1 & 0 \\\\ 0 & -1 \end{matrix}\right) $ will be projected into the subspace, where we solve
 $$
   \left(
   \begin{matrix}
-  a & b \\
+  a & b \\\\
   b & a
   \end{matrix}\right)
   \left(\begin{matrix}
-  x\\
+  x\\\\
   y
   \end{matrix}\right)
-  =
-  \left(\begin{matrix}
-  \sigma & \pi \\
+  = \left(\begin{matrix}
+  \sigma & \pi \\\\
   -\pi & -\sigma
   \end{matrix}\right)
   \left(\begin{matrix}
-  x\\
+  x\\\\
   y
   \end{matrix}\right)
   \Omega
