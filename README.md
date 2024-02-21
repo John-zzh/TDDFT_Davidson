@@ -29,7 +29,9 @@ Y
 \end{matrix}\right)
 \Omega$$
 
+
 and diagonalize the response matrix $\left(\begin{matrix}A&B\\\\-B&-A\end{matrix}\right)$ using a generalized Davidson algorithm[1], and it leads to unconvergence problem.
+
 
 
 ## Solution
