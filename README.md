@@ -29,12 +29,12 @@ Y
 \end{matrix}\right)
 \Omega$$
 
-and diagonalize the response matrix $\left(\begin{matrix}A&B\\\\-B&-A\end{matrix}\right)$ using traditional Davidson algorithm as if this response matrix is symmatric. But it is actually not symmatric, and it leads to unconvergence problem.
+and diagonalize the response matrix $\left(\begin{matrix}A&B\\\\-B&-A\end{matrix}\right)$ using a generalized Davidson algorithm[1], and it leads to unconvergence problem.
 
 
 ## Solution
 
-In stead, a more reliable way is to solve 
+In stead, a more reliable way [2] is to solve 
 
 $$\left(
 \begin{matrix}
@@ -78,3 +78,9 @@ $$
   \end{matrix}\right)
   \Omega
 $$
+
+## reference
+
+[1] Hirao, K. and Nakatsuji, H., 1982. A generalization of the Davidson's method to large nonsymmetric eigenvalue problems. Journal of Computational Physics, 45(2), pp.246-254.
+
+[2] Olsen, J., Jensen, H.J.A. and Jørgensen, P., 1988. Solution of the large matrix equations which occur in response theory. Journal of Computational Physics, 74(2), pp.265-282.
